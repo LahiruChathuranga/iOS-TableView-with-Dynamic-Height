@@ -23,10 +23,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="COP-zk-Y4g">
-                                                <rect key="frame" x="0.0" y="416" width="414" height="320"/>
+                                                <rect key="frame" x="0.0" y="416" width="414" height="192"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="320" id="6x6-C1-wAu"/>
+                                                    <constraint firstAttribute="height" constant="192" id="6x6-C1-wAu"/>
                                                 </constraints>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoTVCell" id="H8u-Xf-YjM" customClass="InfoTVCell" customModule="TBVSample" customModuleProvider="target">
@@ -46,16 +46,26 @@
                                                     <constraint firstAttribute="height" constant="416" id="H40-4z-PyW"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDO-zQ-oIi">
+                                                <rect key="frame" x="0.0" y="608" width="414" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="nPg-0g-8LF"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="COP-zk-Y4g" secondAttribute="trailing" id="0iS-ab-7nV"/>
+                                            <constraint firstItem="BDO-zQ-oIi" firstAttribute="top" secondItem="COP-zk-Y4g" secondAttribute="bottom" id="6sW-dg-4M8"/>
+                                            <constraint firstAttribute="trailing" secondItem="BDO-zQ-oIi" secondAttribute="trailing" id="CuP-Br-Dcl"/>
                                             <constraint firstItem="6AV-bz-Lvn" firstAttribute="top" secondItem="RyY-Wz-jVd" secondAttribute="top" id="GNk-Oe-gjd"/>
-                                            <constraint firstAttribute="bottom" secondItem="COP-zk-Y4g" secondAttribute="bottom" id="W5b-Wq-1hk"/>
                                             <constraint firstAttribute="trailing" secondItem="6AV-bz-Lvn" secondAttribute="trailing" id="f4H-Kp-OKM"/>
                                             <constraint firstItem="COP-zk-Y4g" firstAttribute="leading" secondItem="RyY-Wz-jVd" secondAttribute="leading" id="f9J-oy-lTA"/>
                                             <constraint firstItem="COP-zk-Y4g" firstAttribute="top" secondItem="6AV-bz-Lvn" secondAttribute="bottom" id="iAR-9d-quN"/>
+                                            <constraint firstItem="BDO-zQ-oIi" firstAttribute="leading" secondItem="RyY-Wz-jVd" secondAttribute="leading" id="mvR-IE-uR9"/>
                                             <constraint firstItem="6AV-bz-Lvn" firstAttribute="leading" secondItem="RyY-Wz-jVd" secondAttribute="leading" id="tTe-HY-pdm"/>
+                                            <constraint firstAttribute="bottom" secondItem="BDO-zQ-oIi" secondAttribute="bottom" id="yjL-ed-Q5y"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -86,12 +96,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="104"/>
+            <point key="canvasLocation" x="137.68115942028987" y="103.53260869565219"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
