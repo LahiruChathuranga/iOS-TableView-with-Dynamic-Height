@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0119242625666F2B00A5A7B0 /* DropDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0119242425666F2B00A5A7B0 /* DropDownTableViewCell.swift */; };
+		0119242725666F2B00A5A7B0 /* DropDownTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0119242525666F2B00A5A7B0 /* DropDownTableViewCell.xib */; };
+		0119242B25666FCE00A5A7B0 /* MakeDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0119242A25666FCE00A5A7B0 /* MakeDropDown.swift */; };
 		01401404254FE23000B5983F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01401403254FE23000B5983F /* AppDelegate.swift */; };
 		01401406254FE23000B5983F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01401405254FE23000B5983F /* SceneDelegate.swift */; };
 		01401408254FE23000B5983F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01401407254FE23000B5983F /* ViewController.swift */; };
@@ -14,9 +17,14 @@
 		0140140D254FE23200B5983F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0140140C254FE23200B5983F /* Assets.xcassets */; };
 		01401410254FE23200B5983F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0140140E254FE23200B5983F /* LaunchScreen.storyboard */; };
 		01401419254FE36800B5983F /* InfoTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01401418254FE36800B5983F /* InfoTVCell.swift */; };
+		017A81FB2565A5EE006DF7FB /* CustomPickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 017A81F92565A5EE006DF7FB /* CustomPickerVC.xib */; };
+		017A82012565AE0B006DF7FB /* CustomPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A82002565AE0B006DF7FB /* CustomPickerVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0119242425666F2B00A5A7B0 /* DropDownTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownTableViewCell.swift; sourceTree = "<group>"; };
+		0119242525666F2B00A5A7B0 /* DropDownTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropDownTableViewCell.xib; sourceTree = "<group>"; };
+		0119242A25666FCE00A5A7B0 /* MakeDropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeDropDown.swift; sourceTree = "<group>"; };
 		01401400254FE23000B5983F /* TBVSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBVSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01401403254FE23000B5983F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01401405254FE23000B5983F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +34,8 @@
 		0140140F254FE23200B5983F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01401411254FE23200B5983F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01401418254FE36800B5983F /* InfoTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTVCell.swift; sourceTree = "<group>"; };
+		017A81F92565A5EE006DF7FB /* CustomPickerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPickerVC.xib; sourceTree = "<group>"; };
+		017A82002565AE0B006DF7FB /* CustomPickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPickerVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +49,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0119242325666ED700A5A7B0 /* DropDown */ = {
+			isa = PBXGroup;
+			children = (
+				0119242425666F2B00A5A7B0 /* DropDownTableViewCell.swift */,
+				0119242525666F2B00A5A7B0 /* DropDownTableViewCell.xib */,
+			);
+			path = DropDown;
+			sourceTree = "<group>";
+		};
+		0119242925666FCE00A5A7B0 /* MakeDropDownFile */ = {
+			isa = PBXGroup;
+			children = (
+				0119242A25666FCE00A5A7B0 /* MakeDropDown.swift */,
+			);
+			path = MakeDropDownFile;
+			sourceTree = "<group>";
+		};
 		014013F7254FE23000B5983F = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +85,8 @@
 		01401402254FE23000B5983F /* TBVSample */ = {
 			isa = PBXGroup;
 			children = (
+				0119242925666FCE00A5A7B0 /* MakeDropDownFile */,
+				0119242325666ED700A5A7B0 /* DropDown */,
 				01401403254FE23000B5983F /* AppDelegate.swift */,
 				01401405254FE23000B5983F /* SceneDelegate.swift */,
 				01401407254FE23000B5983F /* ViewController.swift */,
@@ -66,8 +95,18 @@
 				0140140E254FE23200B5983F /* LaunchScreen.storyboard */,
 				01401411254FE23200B5983F /* Info.plist */,
 				01401418254FE36800B5983F /* InfoTVCell.swift */,
+				017A81FD2565A5F5006DF7FB /* Picker */,
 			);
 			path = TBVSample;
+			sourceTree = "<group>";
+		};
+		017A81FD2565A5F5006DF7FB /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				017A82002565AE0B006DF7FB /* CustomPickerVC.swift */,
+				017A81F92565A5EE006DF7FB /* CustomPickerVC.xib */,
+			);
+			path = Picker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +167,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				01401410254FE23200B5983F /* LaunchScreen.storyboard in Resources */,
+				017A81FB2565A5EE006DF7FB /* CustomPickerVC.xib in Resources */,
+				0119242725666F2B00A5A7B0 /* DropDownTableViewCell.xib in Resources */,
 				0140140D254FE23200B5983F /* Assets.xcassets in Resources */,
 				0140140B254FE23000B5983F /* Main.storyboard in Resources */,
 			);
@@ -142,7 +183,10 @@
 			files = (
 				01401408254FE23000B5983F /* ViewController.swift in Sources */,
 				01401419254FE36800B5983F /* InfoTVCell.swift in Sources */,
+				0119242B25666FCE00A5A7B0 /* MakeDropDown.swift in Sources */,
 				01401404254FE23000B5983F /* AppDelegate.swift in Sources */,
+				017A82012565AE0B006DF7FB /* CustomPickerVC.swift in Sources */,
+				0119242625666F2B00A5A7B0 /* DropDownTableViewCell.swift in Sources */,
 				01401406254FE23000B5983F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

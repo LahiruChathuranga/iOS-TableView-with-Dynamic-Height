@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5GF-3A-mJh">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -54,7 +54,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="COP-zk-Y4g" secondAttribute="trailing" id="0iS-ab-7nV"/>
                                             <constraint firstItem="BDO-zQ-oIi" firstAttribute="top" secondItem="COP-zk-Y4g" secondAttribute="bottom" id="6sW-dg-4M8"/>
@@ -70,7 +70,7 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="RyY-Wz-jVd" secondAttribute="bottom" id="T25-Kr-Gf8"/>
+                                    <constraint firstAttribute="bottom" secondItem="RyY-Wz-jVd" secondAttribute="bottom" priority="250" id="T25-Kr-Gf8"/>
                                     <constraint firstItem="RyY-Wz-jVd" firstAttribute="leading" secondItem="Mrm-No-zbP" secondAttribute="leading" id="ZP0-f8-kHG"/>
                                     <constraint firstItem="RyY-Wz-jVd" firstAttribute="top" secondItem="Mrm-No-zbP" secondAttribute="top" id="nHJ-fn-QWb"/>
                                     <constraint firstItem="RyY-Wz-jVd" firstAttribute="width" secondItem="Mrm-No-zbP" secondAttribute="width" id="yxB-pX-etb"/>
@@ -82,13 +82,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Mrm-No-zbP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5ns-ZG-GfU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mrm-No-zbP" secondAttribute="bottom" id="7yx-4x-zRd"/>
-                            <constraint firstItem="Mrm-No-zbP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ge8-tG-5EZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mrm-No-zbP" secondAttribute="trailing" id="V7c-ZD-LeM"/>
                             <constraint firstItem="Mrm-No-zbP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zae-lC-VJI"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="414" height="736"/>
+                    <navigationItem key="navigationItem" id="9SZ-xT-yNK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="stk-iu-pCN">
+                            <connections>
+                                <action selector="pressedAdd:" destination="BYZ-38-t0r" id="Nzr-Me-lz8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="heightCons" destination="6x6-C1-wAu" id="bOX-c7-K1l"/>
                         <outlet property="tableView" destination="COP-zk-Y4g" id="lAk-hq-ZvR"/>
@@ -96,12 +102,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="103.53260869565219"/>
+            <point key="canvasLocation" x="881" y="85"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="V9k-l9-BHk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5GF-3A-mJh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VeR-PE-Jmz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9Hp-T6-Sqw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k5n-6Y-6vt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="188" y="85"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

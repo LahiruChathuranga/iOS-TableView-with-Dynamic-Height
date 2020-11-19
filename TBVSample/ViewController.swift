@@ -9,12 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var heightCons: NSLayoutConstraint!
     
     
+    // MARK: - Variables
     var infoArray: [String] = []
     let cellIdentifire = "InfoTVCell"
+    
     
 
     override func viewDidLoad() {
@@ -41,11 +44,19 @@ class ViewController: UIViewController {
             print(infoArray.count)
             self.heightCons.constant = CGFloat((self.infoArray.count * 50))
             self.tableView.reloadData()
-           
-            
-            
         }
     }
+    
+    @IBAction func pressedAdd(_ sender: Any) {
+        
+        let vc = CustomPickerVC(nibName: "CustomPickerVC", bundle: nil)
+        vc.delegate = self
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true, completion: nil)
+    }
+    
+   
 }
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -71,4 +82,11 @@ extension ViewController {
       let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
       return String((0..<length).map{ _ in letters.randomElement()! })
     }
+}
+extension ViewController: CustomPickerVCDelegate {
+    func didSelectDateAndLanguage(month: String, year: String, language: String) {
+        print("Month - \(month) Year - \(year) Language - \(language)")
+    }
+    
+    
 }
